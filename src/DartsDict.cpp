@@ -24,6 +24,8 @@
 #include "Lexicon.hpp"
 #include "darts.h"
 
+#include <stdlib.h>
+
 using namespace opencc;
 
 static const char* OCDHEADER = "OPENCCDARTS1";
