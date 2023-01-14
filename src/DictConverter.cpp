@@ -24,6 +24,8 @@
 #include "DartsDict.hpp"
 #endif
 
+#include <cstdlib>
+
 using namespace opencc;
 
 DictPtr LoadDictionary(const std::string& format,
@@ -38,7 +40,7 @@ DictPtr LoadDictionary(const std::string& format,
     return SerializableDict::NewFromFile<MarisaDict>(inputFileName);
   }
   fprintf(stderr, "Unknown dictionary format: %s\n", format.c_str());
-  exit(2);
+  std::exit(2);
   return nullptr;
 }
 
