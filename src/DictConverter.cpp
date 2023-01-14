@@ -55,7 +55,7 @@ SerializableDictPtr ConvertDict(const std::string& format, const DictPtr dict) {
     return MarisaDict::NewFromDict(*dict.get());
   }
   fprintf(stderr, "Unknown dictionary format: %s\n", format.c_str());
-  exit(2);
+  std::exit(2);
   return nullptr;
 }
 
